@@ -22,7 +22,8 @@ typedef struct list {
 /*Tambah barang: menu ini digunakan untuk menambahkan barang baru ke dalam stok barang. */
 void addNode(DoubleLinkedList *linkedList, char name[100], int qtt){
     Node *newNode = ( Node *) malloc(sizeof(Node));
-    strcpy(newNode->name, &name);
+    strcpy(newNode->name, name);
+    newNode->qtt = qtt;
     newNode->next = NULL;
     newNode->prev = NULL;
 
@@ -75,7 +76,7 @@ int main() {
             scanf("%d", &qtt);
             addNode(&linkedList, name, qtt);
             break;
-        case 2:
+        case 3:
             displayList(&linkedList);
             break;
         case 6:
