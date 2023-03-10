@@ -14,3 +14,11 @@ typedef struct node {
     struct node *prev;
     struct node *next;
 } Node;
+
+
+int main() {
+    Node *head = NULL;
+    int menu;
+    char name[100];
+    int qtt;
+}
