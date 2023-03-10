@@ -53,8 +53,35 @@ void displayList(DoubleLinkedList *linkedList){
 
 
 int main() {
-    Node *head = NULL;
+    DoubleLinkedList linkedList = { NULL };
     int menu;
     char name[100];
     int qtt;
+
+    while(1){
+        printf("1. Tambah barang\n");
+        printf("2. Hapus barang\n");
+        printf("3. Tampilkan stok barang\n");
+        printf("4. Cari barang\n");
+        printf("5. Update stok barang\n");
+        printf("6. Keluar\n");
+        printf("Pilih menu: ");
+        scanf("%d", &menu);
+        switch (menu) {
+        case 1:
+            printf("Masukkan nama barang: ");
+            scanf("%s", name);
+            printf("Masukkan jumlah barang: ");
+            scanf("%d", &qtt);
+            addNode(&linkedList, name, qtt);
+            break;
+        case 2:
+            displayList(&linkedList);
+            break;
+        case 6:
+            return 0;
+
+        }
+
+    }
 }
