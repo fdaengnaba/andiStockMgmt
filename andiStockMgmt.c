@@ -53,6 +53,15 @@ void displayList(DoubleLinkedList *linkedList){
 /* Cari barang: menu ini digunakan untuk mencari sebuah barang di dalam stok barang berdasarkan nama barang. */
 /* Update stok barang: menu ini digunakan untuk mengupdate stok barang jika terjadi penjualan atau pembelian barang.*/
 
+void freeList(DoubleLinkedList *linkedList){
+    Node *curr = linkedList->head;
+    while (curr != NULL){
+        Node *del = curr;
+        curr = curr->next;
+        free(del);
+    }
+}
+
 
 int main() {
     DoubleLinkedList linkedList = { NULL };
