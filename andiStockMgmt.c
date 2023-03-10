@@ -31,6 +31,7 @@ void addNode(DoubleLinkedList *linkedList, char name[100], int qtt){
         linkedList->head = newNode;
     } else {
         newNode->next = linkedList->head;
+        linkedList->head->prev=newNode;
         linkedList->head = newNode;
     }
         
