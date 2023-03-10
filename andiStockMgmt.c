@@ -31,12 +31,15 @@ void addNode(DoubleLinkedList *linkedList, char name[100], int qtt){
         linkedList->head = newNode;
     } else {
         newNode->next = linkedList->head;
+        linkedList->head->prev=newNode;
         linkedList->head = newNode;
     }
         
 }
 
 /* Hapus barang: menu ini digunakan untuk menghapus barang yang sudah tidak diperlukan dari stok barang. */
+/* -- define function here --*/
+
 /* Tampilkan stok barang: menu ini digunakan untuk menampilkan daftar barang yang ada di dalam stok barang beserta jumlah stoknya. */
 void displayList(DoubleLinkedList *linkedList){
     Node *curr = linkedList->head;
@@ -50,7 +53,21 @@ void displayList(DoubleLinkedList *linkedList){
     }
 }
 /* Cari barang: menu ini digunakan untuk mencari sebuah barang di dalam stok barang berdasarkan nama barang. */
+/* -- define function here --*/
+
+
 /* Update stok barang: menu ini digunakan untuk mengupdate stok barang jika terjadi penjualan atau pembelian barang.*/
+/* -- define function here --*/
+
+/* freeing dynamicly allocated memory*/
+void freeList(DoubleLinkedList *linkedList){
+    Node *curr = linkedList->head;
+    while (curr != NULL){
+        Node *del = curr;
+        curr = curr->next;
+        free(del);
+    }
+}
 
 
 int main() {
