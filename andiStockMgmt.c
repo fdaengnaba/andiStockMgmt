@@ -15,6 +15,10 @@ typedef struct node {
     struct node *next;
 } Node;
 
-typedef struct list{
-    Node *head;
-} doubleLinkedList;
+
+int main() {
+    Node *head = NULL;
+    int menu;
+    char name[100];
+    int qtt;
+}
