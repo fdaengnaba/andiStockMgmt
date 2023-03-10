@@ -14,3 +14,7 @@ typedef struct node {
     struct node *prev;
     struct node *next;
 } Node;
+
+typedef struct list{
+    Node *head;
+} doubleLinkedList;
