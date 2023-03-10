@@ -2,7 +2,7 @@
 
 ## 20220411103232_TK1-W2-S4-R1 Data Structure
 
-### Team 1 :
+### Team 1
 
 - 2502148662 FADHIL FAKKHRUDDIN DAENG NABA
 - 25________ BRYAN WINATA
